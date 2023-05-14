@@ -70,7 +70,7 @@ public class Menu {
             String name = scanner.nextLine();
             System.out.print("Введіть калорійність овоча: ");
             int calories = scanner.nextInt();
-            scanner.nextLine(); // Ігноруємо символ нового рядка після nextInt()
+            scanner.nextLine();
 
             if (calories <= 0) {
                 throw new InvalidInputException("Некоректна калорійність овоча!");
