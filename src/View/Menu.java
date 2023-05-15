@@ -4,7 +4,7 @@ import Core.VegetableFactory;
 import Exceptions.InvalidInputException;
 import Exceptions.VegetableNotAvailableException;
 import Model.Salad;
-import Model.Vegetable.Vegetable;
+import Model.Vegetables.Vegetable;
 
 import java.io.*;
 import java.util.*;

@@ -1,4 +1,4 @@
-package Model.Vegetable;
+package Model.Vegetables;
 
 import java.io.Serializable;
 
@@ -9,6 +9,11 @@ public abstract class Vegetable implements Comparable<Vegetable>, Serializable {
     public Vegetable(String name, int calories) {
         this.name = name;
         this.calories = calories;
+    }
+
+    @Override
+    public String toString() {
+        return getName() + " - " + getCalories() + " калорій";
     }
 
     public String getName() {

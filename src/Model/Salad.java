@@ -2,7 +2,7 @@ package Model;
 
 import Core.Comparators;
 import Exceptions.VegetableNotAvailableException;
-import Model.Vegetable.Vegetable;
+import Model.Vegetables.Vegetable;
 
 import java.io.Serializable;
 import java.util.*;
@@ -53,6 +53,19 @@ public class Salad implements Serializable {
             throw new VegetableNotAvailableException("Даний овоч не міститься у салаті!");
         }
         vegetables.remove(vegetable);
+    }
+
+    public void removeVegetable(int vegetableIndex) throws VegetableNotAvailableException {
+        List<Vegetable> vegetablesList = new ArrayList<>(vegetables);
+
+
+        if (vegetablesList.size() < vegetableIndex) {
+            throw new VegetableNotAvailableException("Даний овоч не міститься у салаті!");
+        }
+        vegetablesList.remove(vegetableIndex);
+
+        vegetables = null;
+        vegetables = new ArrayDeque<>(vegetablesList);
     }
 
     public void show(){

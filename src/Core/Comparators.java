@@ -1,6 +1,6 @@
 package Core;
 
-import Model.Vegetable.Vegetable;
+import Model.Vegetables.Vegetable;
 
 import java.util.Comparator;
 

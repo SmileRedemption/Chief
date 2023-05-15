@@ -1,10 +1,7 @@
 package Core;
 
 import Exceptions.VegetableNotAvailableException;
-import Model.Vegetable.Carrot;
-import Model.Vegetable.Cucumber;
-import Model.Vegetable.Tomato;
-import Model.Vegetable.Vegetable;
+import Model.Vegetables.*;
 
 public class VegetableFactory {
     public Vegetable Create(String name, int calories) throws VegetableNotAvailableException {
@@ -17,7 +14,8 @@ public class VegetableFactory {
         if (name.equals("Tomato")){
             return new Tomato(name, calories);
         }
-
-        throw new VegetableNotAvailableException("This is can't exist");
+        else{
+            return new NoneVegetable(name, calories);
+        }
     }
 }
